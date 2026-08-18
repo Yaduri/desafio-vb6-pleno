@@ -204,7 +204,6 @@ Public Class formTransacoes
                 Using wb As New XLWorkbook()
                     Dim ws = wb.Worksheets.Add(dt, "Transacoes_Consolidadas")
 
-                    ' Formatações no Excel
                     ws.Row(1).Style.Font.Bold = True
                     ws.Row(1).Style.Fill.BackgroundColor = XLColor.FromTheme(XLThemeColor.Accent1)
                     ws.Row(1).Style.Font.FontColor = XLColor.White

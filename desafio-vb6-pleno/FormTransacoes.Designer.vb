@@ -23,6 +23,11 @@ Partial Class FormTransacoes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
+        Label5 = New Label()
+        Label4 = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label1 = New Label()
         btnLimparFiltro = New Button()
         btnFiltrar = New Button()
         cboFiltroStatus = New ComboBox()
@@ -46,6 +51,11 @@ Partial Class FormTransacoes
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(Label4)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(btnLimparFiltro)
         GroupBox1.Controls.Add(btnFiltrar)
         GroupBox1.Controls.Add(cboFiltroStatus)
@@ -55,25 +65,70 @@ Partial Class FormTransacoes
         GroupBox1.Controls.Add(txtFiltroCartao)
         GroupBox1.Location = New Point(12, 12)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(958, 148)
+        GroupBox1.Size = New Size(958, 158)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Filtros de consulta"
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(522, 92)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(49, 20)
+        Label5.TabIndex = 11
+        Label5.Text = "Status"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(317, 91)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(43, 20)
+        Label4.TabIndex = 10
+        Label4.Text = "Valor"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(27, 92)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(133, 20)
+        Label3.TabIndex = 9
+        Label3.Text = "Número do Cartão"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(423, 24)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(76, 20)
+        Label2.TabIndex = 8
+        Label2.Text = "Data Final"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(27, 24)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(84, 20)
+        Label1.TabIndex = 7
+        Label1.Text = "Data Inicial"
+        ' 
         ' btnLimparFiltro
         ' 
-        btnLimparFiltro.Location = New Point(619, 100)
+        btnLimparFiltro.Location = New Point(799, 91)
         btnLimparFiltro.Name = "btnLimparFiltro"
-        btnLimparFiltro.Size = New Size(94, 29)
+        btnLimparFiltro.Size = New Size(100, 50)
         btnLimparFiltro.TabIndex = 6
         btnLimparFiltro.Text = "Limpar Filtro"
         btnLimparFiltro.UseVisualStyleBackColor = True
         ' 
         ' btnFiltrar
         ' 
-        btnFiltrar.Location = New Point(619, 45)
+        btnFiltrar.Location = New Point(799, 26)
         btnFiltrar.Name = "btnFiltrar"
-        btnFiltrar.Size = New Size(94, 29)
+        btnFiltrar.Size = New Size(100, 50)
         btnFiltrar.TabIndex = 5
         btnFiltrar.Text = "Filtrar"
         btnFiltrar.UseVisualStyleBackColor = True
@@ -82,22 +137,22 @@ Partial Class FormTransacoes
         ' 
         cboFiltroStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cboFiltroStatus.FormattingEnabled = True
-        cboFiltroStatus.Location = New Point(317, 91)
+        cboFiltroStatus.Location = New Point(522, 115)
         cboFiltroStatus.Name = "cboFiltroStatus"
         cboFiltroStatus.Size = New Size(151, 28)
         cboFiltroStatus.TabIndex = 4
         ' 
         ' txtFiltroValor
         ' 
-        txtFiltroValor.Location = New Point(169, 91)
+        txtFiltroValor.Location = New Point(317, 114)
         txtFiltroValor.Name = "txtFiltroValor"
-        txtFiltroValor.Size = New Size(125, 27)
+        txtFiltroValor.Size = New Size(111, 27)
         txtFiltroValor.TabIndex = 3
         ' 
         ' dtpFiltroFim
         ' 
         dtpFiltroFim.Checked = False
-        dtpFiltroFim.Location = New Point(317, 45)
+        dtpFiltroFim.Location = New Point(423, 47)
         dtpFiltroFim.Name = "dtpFiltroFim"
         dtpFiltroFim.ShowCheckBox = True
         dtpFiltroFim.Size = New Size(250, 27)
@@ -106,7 +161,7 @@ Partial Class FormTransacoes
         ' dtpFiltroInicio
         ' 
         dtpFiltroInicio.Checked = False
-        dtpFiltroInicio.Location = New Point(27, 45)
+        dtpFiltroInicio.Location = New Point(27, 47)
         dtpFiltroInicio.Name = "dtpFiltroInicio"
         dtpFiltroInicio.ShowCheckBox = True
         dtpFiltroInicio.Size = New Size(250, 27)
@@ -114,10 +169,10 @@ Partial Class FormTransacoes
         ' 
         ' txtFiltroCartao
         ' 
-        txtFiltroCartao.Location = New Point(27, 91)
+        txtFiltroCartao.Location = New Point(27, 115)
         txtFiltroCartao.MaxLength = 16
         txtFiltroCartao.Name = "txtFiltroCartao"
-        txtFiltroCartao.Size = New Size(125, 27)
+        txtFiltroCartao.Size = New Size(218, 27)
         txtFiltroCartao.TabIndex = 0
         ' 
         ' GroupBox2
@@ -126,16 +181,16 @@ Partial Class FormTransacoes
         GroupBox2.Controls.Add(btnExcluir)
         GroupBox2.Controls.Add(btnEditar)
         GroupBox2.Controls.Add(btnNovo)
-        GroupBox2.Location = New Point(12, 166)
+        GroupBox2.Location = New Point(12, 189)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(119, 390)
+        GroupBox2.Size = New Size(119, 367)
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Ações"
         ' 
         ' btnExportarExcel
         ' 
-        btnExportarExcel.Location = New Point(14, 133)
+        btnExportarExcel.Location = New Point(14, 174)
         btnExportarExcel.Name = "btnExportarExcel"
         btnExportarExcel.Size = New Size(94, 29)
         btnExportarExcel.TabIndex = 3
@@ -144,7 +199,7 @@ Partial Class FormTransacoes
         ' 
         ' btnExcluir
         ' 
-        btnExcluir.Location = New Point(14, 98)
+        btnExcluir.Location = New Point(14, 126)
         btnExcluir.Name = "btnExcluir"
         btnExcluir.Size = New Size(94, 29)
         btnExcluir.TabIndex = 2
@@ -153,7 +208,7 @@ Partial Class FormTransacoes
         ' 
         ' btnEditar
         ' 
-        btnEditar.Location = New Point(14, 63)
+        btnEditar.Location = New Point(14, 76)
         btnEditar.Name = "btnEditar"
         btnEditar.Size = New Size(94, 29)
         btnEditar.TabIndex = 1
@@ -174,13 +229,13 @@ Partial Class FormTransacoes
         dgvTransacoes.AllowUserToAddRows = False
         dgvTransacoes.AllowUserToDeleteRows = False
         dgvTransacoes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvTransacoes.Location = New Point(137, 175)
+        dgvTransacoes.Location = New Point(137, 198)
         dgvTransacoes.MultiSelect = False
         dgvTransacoes.Name = "dgvTransacoes"
         dgvTransacoes.ReadOnly = True
         dgvTransacoes.RowHeadersWidth = 51
         dgvTransacoes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvTransacoes.Size = New Size(833, 381)
+        dgvTransacoes.Size = New Size(833, 358)
         dgvTransacoes.TabIndex = 2
         ' 
         ' btnPaginaAnterior
@@ -250,5 +305,10 @@ Partial Class FormTransacoes
     Friend WithEvents btnPaginaAnterior As Button
     Friend WithEvents btnProximaPagina As Button
     Friend WithEvents lblInfoPagina As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 
 End Class

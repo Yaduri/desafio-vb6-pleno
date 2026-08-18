@@ -5,6 +5,7 @@
 
     Public Sub New()
         InitializeComponent()
+        CarregarItensStatus()
     End Sub
 
     ''' <summary>
@@ -19,7 +20,24 @@
         txtNumeroCartao.Text = cartao
         txtValor.Text = valor.ToString("N2")
         txtDescricao.Text = descricao
-        cboStatus.SelectedItem = status
+
+        SelecionarStatus(_statusOriginal)
+    End Sub
+
+    Private Sub CarregarItensStatus()
+        If cboStatus.Items.Count = 0 Then
+            cboStatus.Items.AddRange(New Object() {"Pendente", "Aprovada", "Cancelada"})
+        End If
+    End Sub
+
+    Private Sub SelecionarStatus(status As String)
+        For i As Integer = 0 To cboStatus.Items.Count - 1
+            If String.Equals(cboStatus.Items(i).ToString(), status, StringComparison.OrdinalIgnoreCase) Then
+                cboStatus.SelectedIndex = i
+                Return
+            End If
+        Next
+        If cboStatus.Items.Count > 0 Then cboStatus.SelectedIndex = 0
     End Sub
 
     Private Sub formCadastroTransacao_Load(sender As Object, e As EventArgs) Handles MyBase.Load

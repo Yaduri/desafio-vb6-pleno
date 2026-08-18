@@ -29,6 +29,11 @@ Partial Class formCadastroTransacao
         cboStatus = New ComboBox()
         btnSalvar = New Button()
         btnCancelar = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
+        Label4 = New Label()
+        Label5 = New Label()
         SuspendLayout()
         ' 
         ' txtId
@@ -41,10 +46,10 @@ Partial Class formCadastroTransacao
         ' 
         ' txtNumeroCartao
         ' 
-        txtNumeroCartao.Location = New Point(246, 52)
+        txtNumeroCartao.Location = New Point(228, 52)
         txtNumeroCartao.MaxLength = 16
         txtNumeroCartao.Name = "txtNumeroCartao"
-        txtNumeroCartao.Size = New Size(125, 27)
+        txtNumeroCartao.Size = New Size(174, 27)
         txtNumeroCartao.TabIndex = 1
         ' 
         ' txtValor
@@ -90,11 +95,61 @@ Partial Class formCadastroTransacao
         btnCancelar.Text = "Cancelar"
         btnCancelar.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(79, 29)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(22, 20)
+        Label1.TabIndex = 7
+        Label1.Text = "Id"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(228, 29)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(133, 20)
+        Label2.TabIndex = 8
+        Label2.Text = "Número do Cartão"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(427, 29)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(43, 20)
+        Label3.TabIndex = 9
+        Label3.Text = "Valor"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(587, 29)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(49, 20)
+        Label4.TabIndex = 10
+        Label4.Text = "Status"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(79, 84)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(74, 20)
+        Label5.TabIndex = 11
+        Label5.Text = "Descrição"
+        ' 
         ' formCadastroTransacao
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(790, 277)
+        Controls.Add(Label5)
+        Controls.Add(Label4)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
         Controls.Add(btnCancelar)
         Controls.Add(btnSalvar)
         Controls.Add(cboStatus)
@@ -119,4 +174,9 @@ Partial Class formCadastroTransacao
     Friend WithEvents cboStatus As ComboBox
     Friend WithEvents btnSalvar As Button
     Friend WithEvents btnCancelar As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class
