@@ -77,8 +77,9 @@
                 Return
             End If
 
+            Dim valorTexto As String = txtValor.Text.Trim().Replace(".", ",")
             Dim valor As Decimal
-            If Not Decimal.TryParse(txtValor.Text, valor) OrElse valor <= 0 Then
+            If Not Decimal.TryParse(valorTexto, Globalization.NumberStyles.Currency Or Globalization.NumberStyles.Number, New Globalization.CultureInfo("pt-BR"), valor) OrElse valor <= 0 Then
                 MessageBox.Show("O valor da transação deve ser um número decimal positivo.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 txtValor.Focus()
                 Return
@@ -117,7 +118,7 @@
 
         Catch ex As Exception
             Logger.LogError(ex, "Erro ao salvar dados no formCadastroTransacao.")
-            MessageBox.Show("Ocorreu um erro ao salvar os dados. Detalhes gravados no log.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ocorreu um erro ao salvar os dados. Detalhes gravados no log." & vbCrLf & vbCrLf & $"Detalhes registrados no log em: {Logger.LogFilePath}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -125,4 +126,22 @@
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
+
+    Private Sub txtValor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtValor.KeyPress
+        Dim txt = DirectCast(sender, TextBox)
+
+        If e.KeyChar = "."c Then
+            e.KeyChar = ","c
+        End If
+
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> ","c Then
+            e.Handled = True
+            Return
+        End If
+
+        If e.KeyChar = ","c AndAlso txt.Text.Contains(","c) Then
+            e.Handled = True
+        End If
+    End Sub
+
 End Class

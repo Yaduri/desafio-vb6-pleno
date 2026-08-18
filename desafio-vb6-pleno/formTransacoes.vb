@@ -58,7 +58,7 @@ Public Class formTransacoes
 
         Catch ex As Exception
             Logger.LogError(ex, "Erro ao carregar grid de transações.")
-            MessageBox.Show("Erro ao carregar as transações. Verifique os logs.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Erro ao carregar as transações. Verifique os logs." & vbCrLf & vbCrLf & $"Detalhes registrados no log em: {Logger.LogFilePath}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -152,7 +152,7 @@ Public Class formTransacoes
                 CarregarGrid()
             Catch ex As Exception
                 Logger.LogError(ex, $"Erro ao excluir a transação #{id}")
-                MessageBox.Show("Não foi possível excluir a transação. Detalhes gravados em log.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Não foi possível excluir a transação. Detalhes gravados em log." & vbCrLf & vbCrLf & $"Detalhes registrados no log em: {Logger.LogFilePath}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
@@ -216,7 +216,7 @@ Public Class formTransacoes
             End If
         Catch ex As Exception
             Logger.LogError(ex, "Erro ao exportar relatório consolidado para Excel.")
-            MessageBox.Show("Erro ao exportar para Excel. Detalhes gravados no log.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Erro ao exportar para Excel. Detalhes gravados no log." & vbCrLf & vbCrLf & $"Detalhes registrados no log em: {Logger.LogFilePath}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -235,5 +235,22 @@ Public Class formTransacoes
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning)
         End Try
+    End Sub
+
+    Private Sub txtFiltroValor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFiltroValor.KeyPress
+        Dim txt = DirectCast(sender, TextBox)
+
+        If e.KeyChar = "."c Then
+            e.KeyChar = ","c
+        End If
+
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> ","c Then
+            e.Handled = True
+            Return
+        End If
+
+        If e.KeyChar = ","c AndAlso txt.Text.Contains(","c) Then
+            e.Handled = True
+        End If
     End Sub
 End Class
