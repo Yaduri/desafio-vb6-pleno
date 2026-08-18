@@ -1,0 +1,4 @@
+[2026-08-18 15:52:26] [ERRO] Teste manual de captura e tratamento de log acionado pelo usuário.
+Mensagem: Attempted to divide by zero.
+StackTrace:    at desafio_vb6_pleno.FormTransacoes.btnTestaErro_Click(Object sender, EventArgs e) in C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\formTransacoes.vb:line 227
+--------------------------------------------------------------------------------

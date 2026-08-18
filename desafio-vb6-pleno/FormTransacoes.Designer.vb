@@ -44,6 +44,7 @@ Partial Class FormTransacoes
         btnPaginaAnterior = New Button()
         btnProximaPagina = New Button()
         lblInfoPagina = New Label()
+        btnTestaErro = New Button()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         CType(dgvTransacoes, ComponentModel.ISupportInitialize).BeginInit()
@@ -177,6 +178,7 @@ Partial Class FormTransacoes
         ' 
         ' GroupBox2
         ' 
+        GroupBox2.Controls.Add(btnTestaErro)
         GroupBox2.Controls.Add(btnExportarExcel)
         GroupBox2.Controls.Add(btnExcluir)
         GroupBox2.Controls.Add(btnEditar)
@@ -265,6 +267,15 @@ Partial Class FormTransacoes
         lblInfoPagina.TabIndex = 5
         lblInfoPagina.Text = "Página 1 de 1 (Total: 0 registros)"
         ' 
+        ' btnTestaErro
+        ' 
+        btnTestaErro.Location = New Point(14, 321)
+        btnTestaErro.Name = "btnTestaErro"
+        btnTestaErro.Size = New Size(94, 29)
+        btnTestaErro.TabIndex = 4
+        btnTestaErro.Text = "Testar Log"
+        btnTestaErro.UseVisualStyleBackColor = True
+        ' 
         ' FormTransacoes
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -310,5 +321,6 @@ Partial Class FormTransacoes
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnTestaErro As Button
 
 End Class

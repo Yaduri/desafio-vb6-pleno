@@ -219,4 +219,20 @@ Public Class formTransacoes
             MessageBox.Show("Erro ao exportar para Excel. Detalhes gravados no log.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub btnTestaErro_Click(sender As Object, e As EventArgs) Handles btnTestaErro.Click
+        Try
+            Dim dividendo As Integer = 100
+            Dim divisor As Integer = 0
+            Dim resultado As Integer = dividendo \ divisor
+
+        Catch ex As Exception
+            Logger.LogError(ex, "Teste manual de captura e tratamento de log acionado pelo usuário.")
+
+            MessageBox.Show("Uma falha simulada ocorreu e os detalhes foram registrados no arquivo de log com sucesso!",
+                            "Simulação de Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning)
+        End Try
+    End Sub
 End Class
