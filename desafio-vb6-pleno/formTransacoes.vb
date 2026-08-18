@@ -229,7 +229,8 @@ Public Class formTransacoes
         Catch ex As Exception
             Logger.LogError(ex, "Teste manual de captura e tratamento de log acionado pelo usuário.")
 
-            MessageBox.Show("Uma falha simulada ocorreu e os detalhes foram registrados no arquivo de log com sucesso!",
+            MessageBox.Show("Uma falha simulada ocorreu e os detalhes foram registrados no arquivo de log com sucesso!" & vbCrLf & vbCrLf &
+                            $"Detalhes registrados no log em: {Logger.LogFilePath}",
                             "Simulação de Erro",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning)
