@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("desafio-vb6-pleno"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+add29f9598eca46bdf4882fdc89df03ecd3e5420"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("desafio-vb6-pleno"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("desafio-vb6-pleno"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
