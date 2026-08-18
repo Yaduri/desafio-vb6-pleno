@@ -22,81 +22,86 @@ Partial Class formCadastroTransacao
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        ComboBox1 = New ComboBox()
-        Button1 = New Button()
-        Button2 = New Button()
+        txtId = New TextBox()
+        txtNumeroCartao = New TextBox()
+        txtValor = New TextBox()
+        txtDescricao = New TextBox()
+        cboStatus = New ComboBox()
+        btnSalvar = New Button()
+        btnCancelar = New Button()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' txtId
         ' 
-        TextBox1.Location = New Point(79, 52)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(125, 27)
-        TextBox1.TabIndex = 0
+        txtId.Location = New Point(79, 52)
+        txtId.Name = "txtId"
+        txtId.ReadOnly = True
+        txtId.Size = New Size(125, 27)
+        txtId.TabIndex = 0
         ' 
-        ' TextBox2
+        ' txtNumeroCartao
         ' 
-        TextBox2.Location = New Point(246, 52)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(125, 27)
-        TextBox2.TabIndex = 1
+        txtNumeroCartao.Location = New Point(246, 52)
+        txtNumeroCartao.MaxLength = 16
+        txtNumeroCartao.Name = "txtNumeroCartao"
+        txtNumeroCartao.Size = New Size(125, 27)
+        txtNumeroCartao.TabIndex = 1
         ' 
-        ' TextBox3
+        ' txtValor
         ' 
-        TextBox3.Location = New Point(79, 123)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(125, 27)
-        TextBox3.TabIndex = 2
+        txtValor.Location = New Point(427, 52)
+        txtValor.Name = "txtValor"
+        txtValor.Size = New Size(125, 27)
+        txtValor.TabIndex = 2
         ' 
-        ' TextBox4
+        ' txtDescricao
         ' 
-        TextBox4.Location = New Point(247, 123)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(125, 27)
-        TextBox4.TabIndex = 3
+        txtDescricao.Location = New Point(79, 107)
+        txtDescricao.MaxLength = 255
+        txtDescricao.Multiline = True
+        txtDescricao.Name = "txtDescricao"
+        txtDescricao.Size = New Size(659, 70)
+        txtDescricao.TabIndex = 3
         ' 
-        ' ComboBox1
+        ' cboStatus
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(148, 192)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(151, 28)
-        ComboBox1.TabIndex = 4
+        cboStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cboStatus.FormattingEnabled = True
+        cboStatus.Location = New Point(587, 52)
+        cboStatus.Name = "cboStatus"
+        cboStatus.Size = New Size(151, 28)
+        cboStatus.TabIndex = 4
         ' 
-        ' Button1
+        ' btnSalvar
         ' 
-        Button1.Location = New Point(79, 270)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 29)
-        Button1.TabIndex = 5
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
+        btnSalvar.Location = New Point(89, 209)
+        btnSalvar.Name = "btnSalvar"
+        btnSalvar.Size = New Size(94, 29)
+        btnSalvar.TabIndex = 5
+        btnSalvar.Text = "Salvar"
+        btnSalvar.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnCancelar
         ' 
-        Button2.Location = New Point(277, 270)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(94, 29)
-        Button2.TabIndex = 6
-        Button2.Text = "Button2"
-        Button2.UseVisualStyleBackColor = True
+        btnCancelar.Location = New Point(200, 209)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(94, 29)
+        btnCancelar.TabIndex = 6
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = True
         ' 
         ' formCadastroTransacao
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(464, 384)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(ComboBox1)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        ClientSize = New Size(790, 277)
+        Controls.Add(btnCancelar)
+        Controls.Add(btnSalvar)
+        Controls.Add(cboStatus)
+        Controls.Add(txtDescricao)
+        Controls.Add(txtValor)
+        Controls.Add(txtNumeroCartao)
+        Controls.Add(txtId)
         FormBorderStyle = FormBorderStyle.FixedDialog
         MaximizeBox = False
         MinimizeBox = False
@@ -107,11 +112,11 @@ Partial Class formCadastroTransacao
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents txtNumeroCartao As TextBox
+    Friend WithEvents txtValor As TextBox
+    Friend WithEvents txtDescricao As TextBox
+    Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents btnSalvar As Button
+    Friend WithEvents btnCancelar As Button
 End Class

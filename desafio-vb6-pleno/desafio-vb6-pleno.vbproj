@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <RootNamespace>desafio_vb6_pleno</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>desafio_vb6_pleno.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

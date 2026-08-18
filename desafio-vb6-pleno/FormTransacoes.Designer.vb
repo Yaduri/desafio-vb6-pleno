@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class FormTransacoes
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,18 +23,18 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        txtFiltroCartao = New TextBox()
-        dtpFiltroInicio = New DateTimePicker()
-        dtpFiltroFim = New DateTimePicker()
-        txtFiltroValor = New TextBox()
-        cboFiltroStatus = New ComboBox()
-        btnFiltrar = New Button()
         btnLimparFiltro = New Button()
+        btnFiltrar = New Button()
+        cboFiltroStatus = New ComboBox()
+        txtFiltroValor = New TextBox()
+        dtpFiltroFim = New DateTimePicker()
+        dtpFiltroInicio = New DateTimePicker()
+        txtFiltroCartao = New TextBox()
         GroupBox2 = New GroupBox()
-        btnNovo = New Button()
-        btnEditar = New Button()
-        btnExcluir = New Button()
         btnExportarExcel = New Button()
+        btnExcluir = New Button()
+        btnEditar = New Button()
+        btnNovo = New Button()
         dgvTransacoes = New DataGridView()
         btnPaginaAnterior = New Button()
         btnProximaPagina = New Button()
@@ -55,61 +55,10 @@ Partial Class Form1
         GroupBox1.Controls.Add(txtFiltroCartao)
         GroupBox1.Location = New Point(12, 12)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(776, 148)
+        GroupBox1.Size = New Size(958, 148)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Filtros de consulta"
-        ' 
-        ' txtFiltroCartao
-        ' 
-        txtFiltroCartao.Location = New Point(27, 91)
-        txtFiltroCartao.MaxLength = 16
-        txtFiltroCartao.Name = "txtFiltroCartao"
-        txtFiltroCartao.Size = New Size(125, 27)
-        txtFiltroCartao.TabIndex = 0
-        ' 
-        ' dtpFiltroInicio
-        ' 
-        dtpFiltroInicio.Checked = False
-        dtpFiltroInicio.Location = New Point(27, 45)
-        dtpFiltroInicio.Name = "dtpFiltroInicio"
-        dtpFiltroInicio.ShowCheckBox = True
-        dtpFiltroInicio.Size = New Size(250, 27)
-        dtpFiltroInicio.TabIndex = 1
-        ' 
-        ' dtpFiltroFim
-        ' 
-        dtpFiltroFim.Checked = False
-        dtpFiltroFim.Location = New Point(317, 45)
-        dtpFiltroFim.Name = "dtpFiltroFim"
-        dtpFiltroFim.ShowCheckBox = True
-        dtpFiltroFim.Size = New Size(250, 27)
-        dtpFiltroFim.TabIndex = 2
-        ' 
-        ' txtFiltroValor
-        ' 
-        txtFiltroValor.Location = New Point(169, 91)
-        txtFiltroValor.Name = "txtFiltroValor"
-        txtFiltroValor.Size = New Size(125, 27)
-        txtFiltroValor.TabIndex = 3
-        ' 
-        ' cboFiltroStatus
-        ' 
-        cboFiltroStatus.DropDownStyle = ComboBoxStyle.DropDownList
-        cboFiltroStatus.FormattingEnabled = True
-        cboFiltroStatus.Location = New Point(317, 91)
-        cboFiltroStatus.Name = "cboFiltroStatus"
-        cboFiltroStatus.Size = New Size(151, 28)
-        cboFiltroStatus.TabIndex = 4
-        ' 
-        ' btnFiltrar
-        ' 
-        btnFiltrar.Location = New Point(619, 45)
-        btnFiltrar.Name = "btnFiltrar"
-        btnFiltrar.Size = New Size(94, 29)
-        btnFiltrar.TabIndex = 5
-        btnFiltrar.Text = "Filtrar"
-        btnFiltrar.UseVisualStyleBackColor = True
         ' 
         ' btnLimparFiltro
         ' 
@@ -120,6 +69,57 @@ Partial Class Form1
         btnLimparFiltro.Text = "Limpar Filtro"
         btnLimparFiltro.UseVisualStyleBackColor = True
         ' 
+        ' btnFiltrar
+        ' 
+        btnFiltrar.Location = New Point(619, 45)
+        btnFiltrar.Name = "btnFiltrar"
+        btnFiltrar.Size = New Size(94, 29)
+        btnFiltrar.TabIndex = 5
+        btnFiltrar.Text = "Filtrar"
+        btnFiltrar.UseVisualStyleBackColor = True
+        ' 
+        ' cboFiltroStatus
+        ' 
+        cboFiltroStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cboFiltroStatus.FormattingEnabled = True
+        cboFiltroStatus.Location = New Point(317, 91)
+        cboFiltroStatus.Name = "cboFiltroStatus"
+        cboFiltroStatus.Size = New Size(151, 28)
+        cboFiltroStatus.TabIndex = 4
+        ' 
+        ' txtFiltroValor
+        ' 
+        txtFiltroValor.Location = New Point(169, 91)
+        txtFiltroValor.Name = "txtFiltroValor"
+        txtFiltroValor.Size = New Size(125, 27)
+        txtFiltroValor.TabIndex = 3
+        ' 
+        ' dtpFiltroFim
+        ' 
+        dtpFiltroFim.Checked = False
+        dtpFiltroFim.Location = New Point(317, 45)
+        dtpFiltroFim.Name = "dtpFiltroFim"
+        dtpFiltroFim.ShowCheckBox = True
+        dtpFiltroFim.Size = New Size(250, 27)
+        dtpFiltroFim.TabIndex = 2
+        ' 
+        ' dtpFiltroInicio
+        ' 
+        dtpFiltroInicio.Checked = False
+        dtpFiltroInicio.Location = New Point(27, 45)
+        dtpFiltroInicio.Name = "dtpFiltroInicio"
+        dtpFiltroInicio.ShowCheckBox = True
+        dtpFiltroInicio.Size = New Size(250, 27)
+        dtpFiltroInicio.TabIndex = 1
+        ' 
+        ' txtFiltroCartao
+        ' 
+        txtFiltroCartao.Location = New Point(27, 91)
+        txtFiltroCartao.MaxLength = 16
+        txtFiltroCartao.Name = "txtFiltroCartao"
+        txtFiltroCartao.Size = New Size(125, 27)
+        txtFiltroCartao.TabIndex = 0
+        ' 
         ' GroupBox2
         ' 
         GroupBox2.Controls.Add(btnExportarExcel)
@@ -128,46 +128,46 @@ Partial Class Form1
         GroupBox2.Controls.Add(btnNovo)
         GroupBox2.Location = New Point(12, 166)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(119, 377)
+        GroupBox2.Size = New Size(119, 390)
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
-        GroupBox2.Text = "GroupBox2"
+        GroupBox2.Text = "Ações"
         ' 
-        ' btnNovo
+        ' btnExportarExcel
         ' 
-        btnNovo.Location = New Point(6, 26)
-        btnNovo.Name = "btnNovo"
-        btnNovo.Size = New Size(94, 29)
-        btnNovo.TabIndex = 0
-        btnNovo.Text = "Novo"
-        btnNovo.UseVisualStyleBackColor = True
-        ' 
-        ' btnEditar
-        ' 
-        btnEditar.Location = New Point(6, 61)
-        btnEditar.Name = "btnEditar"
-        btnEditar.Size = New Size(94, 29)
-        btnEditar.TabIndex = 1
-        btnEditar.Text = "Editar"
-        btnEditar.UseVisualStyleBackColor = True
+        btnExportarExcel.Location = New Point(14, 133)
+        btnExportarExcel.Name = "btnExportarExcel"
+        btnExportarExcel.Size = New Size(94, 29)
+        btnExportarExcel.TabIndex = 3
+        btnExportarExcel.Text = "Exportar"
+        btnExportarExcel.UseVisualStyleBackColor = True
         ' 
         ' btnExcluir
         ' 
-        btnExcluir.Location = New Point(6, 96)
+        btnExcluir.Location = New Point(14, 98)
         btnExcluir.Name = "btnExcluir"
         btnExcluir.Size = New Size(94, 29)
         btnExcluir.TabIndex = 2
         btnExcluir.Text = "Excluir"
         btnExcluir.UseVisualStyleBackColor = True
         ' 
-        ' btnExportarExcel
+        ' btnEditar
         ' 
-        btnExportarExcel.Location = New Point(6, 131)
-        btnExportarExcel.Name = "btnExportarExcel"
-        btnExportarExcel.Size = New Size(94, 29)
-        btnExportarExcel.TabIndex = 3
-        btnExportarExcel.Text = "Exportar"
-        btnExportarExcel.UseVisualStyleBackColor = True
+        btnEditar.Location = New Point(14, 63)
+        btnEditar.Name = "btnEditar"
+        btnEditar.Size = New Size(94, 29)
+        btnEditar.TabIndex = 1
+        btnEditar.Text = "Editar"
+        btnEditar.UseVisualStyleBackColor = True
+        ' 
+        ' btnNovo
+        ' 
+        btnNovo.Location = New Point(14, 28)
+        btnNovo.Name = "btnNovo"
+        btnNovo.Size = New Size(94, 29)
+        btnNovo.TabIndex = 0
+        btnNovo.Text = "Novo"
+        btnNovo.UseVisualStyleBackColor = True
         ' 
         ' dgvTransacoes
         ' 
@@ -180,12 +180,12 @@ Partial Class Form1
         dgvTransacoes.ReadOnly = True
         dgvTransacoes.RowHeadersWidth = 51
         dgvTransacoes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvTransacoes.Size = New Size(651, 313)
+        dgvTransacoes.Size = New Size(833, 381)
         dgvTransacoes.TabIndex = 2
         ' 
         ' btnPaginaAnterior
         ' 
-        btnPaginaAnterior.Location = New Point(137, 510)
+        btnPaginaAnterior.Location = New Point(137, 566)
         btnPaginaAnterior.Name = "btnPaginaAnterior"
         btnPaginaAnterior.Size = New Size(94, 29)
         btnPaginaAnterior.TabIndex = 3
@@ -194,7 +194,7 @@ Partial Class Form1
         ' 
         ' btnProximaPagina
         ' 
-        btnProximaPagina.Location = New Point(694, 510)
+        btnProximaPagina.Location = New Point(876, 566)
         btnProximaPagina.Name = "btnProximaPagina"
         btnProximaPagina.Size = New Size(94, 29)
         btnProximaPagina.TabIndex = 4
@@ -204,25 +204,27 @@ Partial Class Form1
         ' lblInfoPagina
         ' 
         lblInfoPagina.AutoSize = True
-        lblInfoPagina.Location = New Point(358, 514)
+        lblInfoPagina.Location = New Point(464, 566)
         lblInfoPagina.Name = "lblInfoPagina"
         lblInfoPagina.Size = New Size(221, 20)
         lblInfoPagina.TabIndex = 5
         lblInfoPagina.Text = "Página 1 de 1 (Total: 0 registros)"
         ' 
-        ' Form1
+        ' FormTransacoes
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 555)
+        ClientSize = New Size(982, 603)
         Controls.Add(lblInfoPagina)
         Controls.Add(btnProximaPagina)
         Controls.Add(btnPaginaAnterior)
         Controls.Add(dgvTransacoes)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
-        Name = "Form1"
-        Text = "Form1"
+        MinimumSize = New Size(950, 600)
+        Name = "FormTransacoes"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "XYZ Administradora de Cartões - Gestão de Transações"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)

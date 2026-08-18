@@ -48,7 +48,6 @@ C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\bin\Debug\net10.0-windows\r
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.vbproj.AssemblyReference.cache
-C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio_vb6_pleno.Form1.resources
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.vbproj.GenerateResource.cache
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.GeneratedMSBuildEditorConfig.editorconfig
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.AssemblyInfoInputs.cache
@@ -61,3 +60,5 @@ C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\r
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.pdb
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio-vb6-pleno.genruntimeconfig.cache
 C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\ref\desafio-vb6-pleno.dll
+C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio_vb6_pleno.formCadastroTransacao.resources
+C:\Trabalhos\VB6\desafio-vb6-pleno\desafio-vb6-pleno\obj\Debug\net10.0-windows\desafio_vb6_pleno.FormTransacoes.resources
