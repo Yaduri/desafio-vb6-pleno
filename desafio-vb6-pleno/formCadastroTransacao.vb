@@ -79,7 +79,7 @@
 
             Dim valorTexto As String = txtValor.Text.Trim().Replace(".", ",")
             Dim valor As Decimal
-            If Not Decimal.TryParse(valorTexto, Globalization.NumberStyles.Currency Or Globalization.NumberStyles.Number, New Globalization.CultureInfo("pt-BR"), valor) OrElse valor <= 0 Then
+            If Not Decimal.TryParse(txtValor.Text, valor) OrElse valor <= 0 Then
                 MessageBox.Show("O valor da transação deve ser um número decimal positivo.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 txtValor.Focus()
                 Return
